@@ -4,6 +4,7 @@ The framework for assisting human while correcting the OCR errors in documents i
 The interactive features as of now are:-
 1. Error detection.
 2. Generating Suggestions (will replace this to auto-completion in Future Work).
+Please mail to rohitsaluja22@gmail.com or file an issue for any suggestions related to auto-completion.
 
 Following information is updated on the fly, after correction of each page:-
 1. A domain specific dictionary which is uploaded on the fly.
@@ -17,6 +18,7 @@ https://tinyurl.com/y7wbpo6m
 2. The purple words are the auto corrections.
 3. The incorrect words are colored with blue, green and red strings from Dictionary. This improves readability.
 4. The user can type in slp1 format or right click on the word (right click suggestion may be a partially corrected word) to correct the words. "Ctrl+d" converts the slp1 word-under-cursor to Devanagari and removes the color coding from the word-under-cursor.
+Right click works after clicking left on the word-under-cursor. Please mail to rohitsaluja22@gmail.com or file an issue for any suggestions to correct this.
 
 # Ubuntu and Qt version
 
@@ -35,14 +37,14 @@ Compiled and Tested on Ubuntu Ubuntu 16.04. with Qt 5
 
 3. Go to folder "FrameWorkCode" and compile
 - $ cd FrameWorkCode
-- $ qmake 
+- $ qmake qpadfinal.pro
 - $ make
 Ignore the warnings. Will be removed in the next version.
 
 # How to run the code?
 
 Execute file qpadfinal in folder "FrameWorkCode"
-- $./qpadfinal
+- $ ./qpadfinal
 
 # Creating Databse for Framework:
 
