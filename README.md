@@ -31,17 +31,18 @@ Compiled and Tested on Ubuntu Ubuntu 16.04. with Qt 5
 - Click Install on Top Right Corner.
 
 2. Install qt5:
-$sudo apt-get install qt5-default
+- $sudo apt-get install qt5-default
 
-3. Go to folder FrameWorkCode and compile
-$ cd FrameWorkCode
-$ qmake 
-$ make
+3. Go to folder "FrameWorkCode" and compile
+- $ cd FrameWorkCode
+- $ qmake 
+- $ make
 Ignore the warnings. Will be removed in the next version.
 
 # How to run the code?
 
-$./qpadfinal
+Execute file qpadfinal in folder "FrameWorkCode"
+- $./qpadfinal
 
 # Creating Databse for Framework:
 
