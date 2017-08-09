@@ -13,6 +13,10 @@ Following information is updated on the fly, after correction of each page:-
 # Video demo
 
 https://tinyurl.com/y7wbpo6m 
+1. After laoding the OCR page, as user clicks on Spell Check, the correct words remain black.
+2. The purple words are the auto corrections.
+3. The incorrect words are colored with blue, green and red strings from Dictionary. This improves readability.
+4. The user can type in slp1 format or right click on the word (right click suggestion may give a partially corrected word) to correct the words. "Ctrl+d" converts the slp1 word to Devanagari.
 
 # Tested for Ubuntu
 Compiled and Tested on Ubuntu 14.04 LTS and Ubuntu 16.04. with QT Creator 5.4.1
@@ -22,23 +26,22 @@ Download and Install latest C++ Qt Creator 5.4.1
 Add the Shobhika font to Ubuntu: https://github.com/Sandhi-IITBombay/Shobhika for Devanagari
 
 # How to run the code?
-Download the source code. Open, Qt Creator and then Open the Project File FrameWorkCode/qpadfinal.pro
-Press "Ctrl+R" to run the code
+Download the source code. Open, Qt Creator and then Open the Project File "FrameWorkCode/qpadfinal.pro"
+Press "Ctrl+R" to run the code.
 
 # Creating Databse for Framework:
 
 The folder “data/Book1” contains:-
-0) A book named “Aryabhatiyabhashya of Nilakantha III Golapada (1957).pdf” for demo example.
-1) “Dict” which is text file for Sanskrit Dictionary of 1.3 million words.
-2) “ConfPmap” which is optional and contain prior OCR confusions.
+1) A book named “Aryabhatiyabhashya of Nilakantha III Golapada (1957).pdf” for demo example.
+2) “Dict” which is text file for Sanskrit Dictionary of 1.3 million words.
 3) “IEROCR” text file that contains the OCR output of the book, each page separated by newline. ER represents English Removed, we ignore the words in english as Sanskrit ind-senz does not recognize English. Instead of ind-senz, output any OCR system can be used with the same filename.
 4) “GEROCR” text file that contains the Google Doc output of the book, each page separated by newline. Instead of ind-senz, output any OCR system, other than one used in step 3 (above), can be used with the same filename.
 5) SRules that contain 71 Sandhi Splitting Rules.
 6) A text file with name "PWords" may be additionally added in folder "Book1" with Domain words, each separated by a newline, if known in advance.
-7) A text file with name "CPair" may be additionally added in folder "Book1" with tab separated Correction pairs, one pair in one line, if known in advance.
-6) Folder “Inds” with jpeg files for first 20 pages of book and corresponding per page output from Indsenz.
-7) Folder “Correct” with correct output of corresponding 20 pages in folder “Inds”.
-8) Folder “Corrected” in which the output corrected by the user would be loaded while using the application.
+7) A text file with name "CPair" may be additionally added in folder "Book1" with tab separated Correction pairs, one pair in one line, if known in advance. Prior OCR Confusions are also loaded from this file in additions to the autocorrections performed.
+8) Folder “Inds” with jpeg files for first 20 pages of book and corresponding per page output from Indsenz.
+9) Folder “Correct” with correct output of corresponding 20 pages in folder “Inds”.
+10) Folder “Corrected” in which the output corrected by the user would be loaded while using the application.
 
 # How to use the Framework
 
