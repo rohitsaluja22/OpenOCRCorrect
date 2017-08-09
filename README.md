@@ -1,4 +1,4 @@
-# Framework-for-Error-Detection-and-Corrections-in-Indic-OCR
+# OpenOCRCorrect
 The framework for assisting human while correcting the OCR errors in documents in Indian Languages.
 
 The interactive features as of now are:-
@@ -16,18 +16,32 @@ https://tinyurl.com/y7wbpo6m
 1. After laoding the OCR page, as user clicks on Spell Check, the correct words remain black.
 2. The purple words are the auto corrections.
 3. The incorrect words are colored with blue, green and red strings from Dictionary. This improves readability.
-4. The user can type in slp1 format or right click on the word (right click suggestion may be a partially corrected word) to correct the words. "Ctrl+d" converts the slp1 word to Devanagari.
+4. The user can type in slp1 format or right click on the word (right click suggestion may be a partially corrected word) to correct the words. "Ctrl+d" converts the slp1 word-under-cursor to Devanagari and removes the color coding from the word-under-cursor.
 
-# Tested for Ubuntu
-Compiled and Tested on Ubuntu 14.04 LTS and Ubuntu 16.04. with QT Creator 5.4.1
+# Ubuntu and Qt version
+
+Compiled and Tested on Ubuntu Ubuntu 16.04. with Qt 5
 
 # Installation
-Download and Install latest C++ Qt Creator 5.4.1
-Add the Shobhika font to Ubuntu: https://github.com/Sandhi-IITBombay/Shobhika for Devanagari
+
+1. Add the Shobhika Font to Ubuntu from https://github.com/Sandhi-IITBombay/Shobhika/releases/ for reading Devanagari in application.
+- Download latest version zip.
+- Unzip the file.
+- Open otf files with Font Viewer.
+- Click Install on Top Right Corner.
+
+2. Install qt5:
+$sudo apt-get install qt5-default
+
+3. Go to folder FrameWorkCode and compile
+$ cd FrameWorkCode
+$ qmake 
+$ make
+Ignore the warnings. Will be removed in the next version.
 
 # How to run the code?
-Download the source code. Open, Qt Creator and then Open the Project File "FrameWorkCode/qpadfinal.pro"
-Press "Ctrl+R" to run the code.
+
+$./qpadfinal
 
 # Creating Databse for Framework:
 
