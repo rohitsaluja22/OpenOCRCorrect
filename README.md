@@ -60,12 +60,13 @@ If there are any issues in the format, just right click on the word and select t
 9) As you use “Cntrl + Shift + P” to load domain words, you will observe improvement in suggestions page by page.
 10) A useful tip: keep the GEROCR open in an editor as certain correct lines can be directly copied from it.
 
-# References and code:
+# References:
 1. We started the code (and used icons) from: https://www.youtube.com/watch?v=x858_WCtl_Y
 2. We further improved the application via ideas from "QPlainTextEdit With In Line Spell Check". Visit: https://john.nachtimwald.com/2009/08/22/qplaintextedit-with-in-line-spell-check/
 3. For generating suggestions and  we used "Algorithm: Edit distance using a trie-tree (Dynamic Programming)" by Author: Murilo Adriano Vasconcelos <muriloufg@gmail.com>.
 Visit: https://murilo.wordpress.com/2011/02/01/fast-and-easy-levenshtein-distance-using-a-trie-in-c/
 4. For extracting OCR confusions, we used C++ implementation of "A linear space algorithm for computing maximal common subsequences" by D. S. Hirschberg for allignment. Visit  http://portal.acm.org/citation.cfm?id=360861. 
-We further developed the code to extract OCR confusions from unalligned OCR text, alligned OCR text and Correct text. 
+We further developed the code to extract OCR confusions from unalligned OCR text, alligned OCR text and Correct text.
+5. Abdulkader, Ahmad, and Mathew R. Casey. "Low cost correction of OCR errors using learning in a multi-engine environment." Document Analysis and Recognition, 2009. ICDAR'09. 10th International Conference on. IEEE, 2009.
 
 
