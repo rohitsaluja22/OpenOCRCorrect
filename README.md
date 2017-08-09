@@ -31,7 +31,7 @@ Compiled and Tested on Ubuntu Ubuntu 16.04. with Qt 5
 - Click Install on Top Right Corner.
 
 2. Install qt5:
-- $sudo apt-get install qt5-default
+- $ sudo apt-get install qt5-default
 
 3. Go to folder "FrameWorkCode" and compile
 - $ cd FrameWorkCode
