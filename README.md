@@ -1,5 +1,6 @@
 # OpenOCRCorrect
-The framework for assisting human while correcting the OCR errors in documents in Indian Languages.
+A framework for assisting human while correcting the OCR errors in documents, mostly dedicated to Indian Languages.
+Tested on Sanskrit, Hindi, Marathi and English.
 
 The interactive features as of now are:-
 1. Error detection.
