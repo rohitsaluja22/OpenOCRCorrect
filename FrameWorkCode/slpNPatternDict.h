@@ -48,7 +48,7 @@ string ReplaceStringRestricted(string subject, const string& search, const strin
     return subject;
 }
 
-bool HinFlag =1, SanFlag = 0;
+bool HinFlag =0, SanFlag = 1;
 
 string toDev(string s)
 { //Hin:-
