@@ -16,7 +16,7 @@ https://tinyurl.com/y7wbpo6m
 1. After laoding the OCR page, as user clicks on Spell Check, the correct words remain black.
 2. The purple words are the auto corrections.
 3. The incorrect words are colored with blue, green and red strings from Dictionary. This improves readability.
-4. The user can type in slp1 format or right click on the word (right click suggestion may give a partially corrected word) to correct the words. "Ctrl+d" converts the slp1 word to Devanagari.
+4. The user can type in slp1 format or right click on the word (right click suggestion may be a partially corrected word) to correct the words. "Ctrl+d" converts the slp1 word to Devanagari.
 
 # Tested for Ubuntu
 Compiled and Tested on Ubuntu 14.04 LTS and Ubuntu 16.04. with QT Creator 5.4.1
@@ -31,14 +31,14 @@ Press "Ctrl+R" to run the code.
 
 # Creating Databse for Framework:
 
-The folder “data/Book1” contains:-
+The folder “data/Book1Sanskrit” contains:-
 1) A book named “Aryabhatiyabhashya of Nilakantha III Golapada (1957).pdf” for demo example.
 2) “Dict” which is text file for Sanskrit Dictionary of 1.3 million words.
 3) “IEROCR” text file that contains the OCR output of the book, each page separated by newline. ER represents English Removed, we ignore the words in english as Sanskrit ind-senz does not recognize English. Instead of ind-senz, output any OCR system can be used with the same filename.
 4) “GEROCR” text file that contains the Google Doc output of the book, each page separated by newline. Instead of ind-senz, output any OCR system, other than one used in step 3 (above), can be used with the same filename.
 5) SRules that contain 71 Sandhi Splitting Rules.
-6) A text file with name "PWords" may be additionally added in folder "Book1" with Domain words, each separated by a newline, if known in advance.
-7) A text file with name "CPair" may be additionally added in folder "Book1" with tab separated Correction pairs, one pair in one line, if known in advance. Prior OCR Confusions are also loaded from this file in additions to the autocorrections performed.
+6) A text file with name "PWords" may be additionally added in folder "Book1Sanskrit" with Domain words, each separated by a newline, if known in advance.
+7) A text file with name "CPair" may be additionally added in folder "Book1Sanskrit" with tab separated Correction pairs, one pair in one line, if known in advance. Prior OCR Confusions are also loaded from this file in additions to the autocorrections performed.
 8) Folder “Inds” with jpeg files for first 20 pages of book and corresponding per page output from Indsenz.
 9) Folder “Correct” with correct output of corresponding 20 pages in folder “Inds”.
 10) Folder “Corrected” in which the output corrected by the user would be loaded while using the application.
@@ -46,13 +46,13 @@ The folder “data/Book1” contains:-
 # How to use the Framework
 
 1) Click on the “Open” icon on top left, or press “Ctrl+O”
-2) Open the file “data/Book1/Inds/page-1.txt”. This also link the files and folders in “Book1/”.
-3) Click on “Load Data” to load Dictionary, Confusions, Sandhi Rules, GEROCR , IEROCR. Common OCR words in GEROCR and IEROCR will be loaded in Domain Vocabulary. If you forget to “Load Data”, data will be loaded whenever you right click a word.
+2) Open the file “data/Book1Sanskrit/Inds/page-1.txt”. This also link the files and folders in “Book1Sanskrit/”.
+3) Click on “Load Data” to load Dictionary, Confusions, Sandhi Rules, GEROCR , IEROCR. Common OCR words in GEROCR and IEROCR will be loaded in Domain Vocabulary. It will take few seconds.
+If you forget to “Load Data”, data will be loaded whenever you right click a word.
 4) Finally, after loading data, page1.txt will again appear in the text browzer. Left click on the word to change the mouse cursor position and then right click on the colored words to generate suggestions.
 5) Type in slp1 format and press “Cntrl+d” to change the text under cursor to Devanagari.
 e.g. :-
-शशरननार -> शशरननाN -> (Cntrl D) -> शशरननाड
-"गनाररर्ग्यककेरलननीलकण्ठस o मससस्वववरचचित" -> "गनाररर्ग्यककेरलननीलकण्ठससोमससस्वववरचचित-”
+प्रन्थाङ्कः -> graन्थाङ्कः -> (Cntrl D) -> ग्रन्थाङ्कः
 If there are any issues in the format, just right click on the word and select the correct suggestion. Leave the correct colored words as it is.
 6) Do not forget to use “Cntrl + S” to save the partially/fully corrected page to folder “Corrected”. Next time you come to the same page, the page will be uploaded from folder “Corrected” automatically.
 7) Very Important: Afther the whole page is corrected load the words in Domainvocabulary by clicking “Cntrl + Shift + P”.
