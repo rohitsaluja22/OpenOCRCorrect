@@ -25,8 +25,8 @@
 #include <QLabel>
 #include <QMouseEvent>
 #include <QDebug>
-#include <tesseract/baseapi.h>
-#include <leptonica/allheaders.h>
+//#include <tesseract/baseapi.h>
+//#include <leptonica/allheaders.h>
 #include <QPlainTextEdit>
 //#include "toFromslp1.h"
 #include "zoom.h"
