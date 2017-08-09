@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1369</width>
+    <height>736</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="maximumSize">
+       <size>
+        <width>500</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="maximumSize">
+       <size>
+        <width>500</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QTextEdit" name="textEdit">
+        <property name="maximumSize">
+         <size>
+          <width>120</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>FreeSans</family>
+          <italic>true</italic>
+         </font>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContents</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="textBrowser">
+        <property name="font">
+         <font>
+          <family>Sanskrit 2003</family>
+          <pointsize>11</pointsize>
+          <italic>false</italic>
+         </font>
+        </property>
+        <property name="mouseTracking">
+         <bool>true</bool>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContents</enum>
+        </property>
+        <property name="undoRedoEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="readOnly">
+         <bool>false</bool>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sanskrit 2003'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="acceptRichText">
+         <bool>true</bool>
+        </property>
+        <property name="textInteractionFlags">
+         <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustIgnored</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="renderHints">
+         <set>QPainter::NonCosmeticDefaultPen</set>
+        </property>
+        <property name="dragMode">
+         <enum>QGraphicsView::ScrollHandDrag</enum>
+        </property>
+        <property name="transformationAnchor">
+         <enum>QGraphicsView::AnchorViewCenter</enum>
+        </property>
+        <property name="resizeAnchor">
+         <enum>QGraphicsView::AnchorViewCenter</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+   <zorder>lineEdit</zorder>
+   <zorder>progressBar</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1369</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOCR_Correction_Window">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_As"/>
+    <addaction name="actionSpell_Check"/>
+    <addaction name="actionLoad_Next_Page"/>
+    <addaction name="actionLoad_Prev_Page"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoadGDocPage"/>
+    <addaction name="actionToDevanagari"/>
+    <addaction name="actionLoadData"/>
+    <addaction name="actionLoadDict"/>
+    <addaction name="actionLoadOCRWords"/>
+    <addaction name="actionLoadDomain"/>
+    <addaction name="actionLoadSubPS"/>
+    <addaction name="actionLoadConfusions"/>
+    <addaction name="actionSugg"/>
+    <addaction name="actionToSlp1"/>
+   </widget>
+   <widget class="QMenu" name="menuCreateReports">
+    <property name="title">
+     <string>CreateReports</string>
+    </property>
+    <addaction name="actionCreateBest2OCR"/>
+    <addaction name="actionCreateSuggestionLog"/>
+    <addaction name="actionCreateSuggestionLogNearestPriority"/>
+    <addaction name="actionErrorDetectionRep"/>
+    <addaction name="actionErrorDetectWithoutAdaptation"/>
+    <addaction name="actionErrorDetectionRepUniq"/>
+   </widget>
+   <widget class="QMenu" name="menuSaveVariables">
+    <property name="title">
+     <string>SaveVariables</string>
+    </property>
+    <addaction name="actionCPair"/>
+    <addaction name="actionPrimarySecOCRPair"/>
+    <addaction name="actionCPairIEROcrVsCorrect"/>
+    <addaction name="actionCPairGEROcrVsCorrect"/>
+   </widget>
+   <widget class="QMenu" name="menuConvertFiles">
+    <property name="title">
+     <string>ConvertFiles</string>
+    </property>
+    <addaction name="actionToSlp1_2"/>
+    <addaction name="actionToDev"/>
+    <addaction name="actionExtractDev"/>
+    <addaction name="actionEditDistRep"/>
+    <addaction name="actionConfusionFreqHist"/>
+    <addaction name="actionFilterOutGT50EditDisPairs"/>
+   </widget>
+   <widget class="QMenu" name="menuFeatureExtraction">
+    <property name="title">
+     <string>FeatureExtraction</string>
+    </property>
+    <addaction name="actionPrepareFeatures"/>
+   </widget>
+   <addaction name="menuOCR_Correction_Window"/>
+   <addaction name="menuCreateReports"/>
+   <addaction name="menuSaveVariables"/>
+   <addaction name="menuConvertFiles"/>
+   <addaction name="menuFeatureExtraction"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSave_As"/>
+   <addaction name="actionLoadData"/>
+   <addaction name="separator"/>
+   <addaction name="actionSpell_Check"/>
+   <addaction name="separator"/>
+   <addaction name="actionLoad_Prev_Page"/>
+   <addaction name="actionLoad_Next_Page"/>
+   <addaction name="separator"/>
+   <addaction name="actionLoadGDocPage"/>
+   <addaction name="separator"/>
+   <addaction name="actionToDevanagari"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="AppResources.qrc">
+     <normaloff>:/Images/open.png</normaloff>:/Images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="AppResources.qrc">
+     <normaloff>:/Images/save.png</normaloff>:/Images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="icon">
+    <iconset resource="AppResources.qrc">
+     <normaloff>:/Images/save-as.png</normaloff>:/Images/save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save As</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="AppResources.qrc">
+     <normaloff>:/Images/New.png</normaloff>:/Images/New.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionSpell_Check">
+   <property name="text">
+    <string>Spell Check(CntrlShftC)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
+   </property>
+  </action>
+  <action name="actionLoad_Next_Page">
+   <property name="text">
+    <string>Page(CntlShiftR)&gt;&gt;</string>
+   </property>
+   <property name="toolTip">
+    <string>Page(CntlShiftR)&gt;&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+R</string>
+   </property>
+  </action>
+  <action name="actionLoad_Prev_Page">
+   <property name="text">
+    <string>&lt;&lt;Page(CntrlShftL)</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;&lt;Page(CntrlShftL)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+L</string>
+   </property>
+  </action>
+  <action name="actionLoadGDocPage">
+   <property name="text">
+    <string>Save and Load PWords(CntrlShftP)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+P</string>
+   </property>
+  </action>
+  <action name="actionToDevanagari">
+   <property name="text">
+    <string>toDevanagari(CntrlD)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionLoadData">
+   <property name="text">
+    <string>LoadData</string>
+   </property>
+  </action>
+  <action name="actionLoadDict">
+   <property name="text">
+    <string>LoadDict</string>
+   </property>
+  </action>
+  <action name="actionLoadOCRWords">
+   <property name="text">
+    <string>LoadOCRWords</string>
+   </property>
+  </action>
+  <action name="actionLoadDomain">
+   <property name="text">
+    <string>LoadDomain</string>
+   </property>
+  </action>
+  <action name="actionLoadSubPS">
+   <property name="text">
+    <string>LoadSubPS</string>
+   </property>
+  </action>
+  <action name="actionLoadConfusions">
+   <property name="text">
+    <string>LoadConfusions</string>
+   </property>
+  </action>
+  <action name="actionSugg">
+   <property name="text">
+    <string>sugg</string>
+   </property>
+   <property name="shortcut">
+    <string>Menu</string>
+   </property>
+  </action>
+  <action name="actionCreateBest2OCR">
+   <property name="text">
+    <string>CreateBest2OCR</string>
+   </property>
+  </action>
+  <action name="actionToSlp1">
+   <property name="text">
+    <string>toSlp1</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actionCreateSuggestionLog">
+   <property name="text">
+    <string>CreateSuggestionLog</string>
+   </property>
+  </action>
+  <action name="actionCreateSuggestionLogNearestPriority">
+   <property name="text">
+    <string>CreateSuggestionLogNearestPriority</string>
+   </property>
+  </action>
+  <action name="actionErrorDetectionRep">
+   <property name="text">
+    <string>ErrorDetectionRep</string>
+   </property>
+  </action>
+  <action name="actionErrorDetectWithoutAdaptation">
+   <property name="text">
+    <string>ErrorDetectWithoutAdaptation</string>
+   </property>
+  </action>
+  <action name="actionCPair">
+   <property name="text">
+    <string>CPair</string>
+   </property>
+  </action>
+  <action name="actionToSlp1_2">
+   <property name="text">
+    <string>toSlp1</string>
+   </property>
+  </action>
+  <action name="actionToDev">
+   <property name="text">
+    <string>toDev</string>
+   </property>
+  </action>
+  <action name="actionExtractDev">
+   <property name="text">
+    <string>ExtractDevWords</string>
+   </property>
+   <property name="toolTip">
+    <string>ExtractDevWords</string>
+   </property>
+  </action>
+  <action name="actionPrimarySecOCRPair">
+   <property name="text">
+    <string>PrimarySecOCRPairs</string>
+   </property>
+  </action>
+  <action name="actionCPairIEROcrVsCorrect">
+   <property name="text">
+    <string>CPairIEROcrVsCorrect</string>
+   </property>
+  </action>
+  <action name="actionEditDistRep">
+   <property name="text">
+    <string>EditDistRep</string>
+   </property>
+  </action>
+  <action name="actionConfusionFreqHist">
+   <property name="text">
+    <string>ConfusionFreqHist</string>
+   </property>
+  </action>
+  <action name="actionCPairGEROcrVsCorrect">
+   <property name="text">
+    <string>CPairGEROcrVsCorrect</string>
+   </property>
+  </action>
+  <action name="actionFilterOutGT50EditDisPairs">
+   <property name="text">
+    <string>FilterOutGT50EditDisPairs</string>
+   </property>
+  </action>
+  <action name="actionPrepareFeatures">
+   <property name="text">
+    <string>PrepareFeatures</string>
+   </property>
+  </action>
+  <action name="actionErrorDetectionRepUniq">
+   <property name="text">
+    <string>ErrorSuggRepUniq</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>textBrowser</tabstop>
+  <tabstop>graphicsView</tabstop>
+ </tabstops>
+ <resources>
+  <include location="AppResources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
