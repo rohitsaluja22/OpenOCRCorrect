@@ -1,4 +1,4 @@
-# Source Code for Framework-for-Error-Detection-and-Corrections-in-Indic-OCR
+# Framework-for-Error-Detection-and-Corrections-in-Indic-OCR
 The framework for assisting human while correcting the OCR errors in documents in Indian Languages.
 
 The interactive features as of now are:-
