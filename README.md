@@ -20,6 +20,7 @@ Compiled and Tested on Ubuntu 14.04 LTS and Ubuntu 16.04. with QT Creator 5.4.1
 
 #Installation
 Download and Install latest C++ Qt Creator 5.4.1
+Add the Shobhika font to Ubuntu: https://github.com/Sandhi-IITBombay/Shobhika for Devanagari
 
 # How to run the code?
 Open Project with Qt Creator: Open File qpadfinal/qpadfinal.pro
