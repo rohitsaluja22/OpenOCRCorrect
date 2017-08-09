@@ -1,7 +1,6 @@
 # Source Code for Framework-for-Error-Detection-and-Corrections-in-Indic-OCR
 The framework for assisting human while correcting the OCR errors in documents in Indian Languages.
 
-
 The interactive features as of now are:-
 1. Error detection.
 2. Generating Suggestions (will replace this to auto-completion in Future Work).
@@ -15,15 +14,15 @@ Following information is updated on the fly, after correction of each page:-
 
 https://tinyurl.com/y7wbpo6m 
 
-#Tested for Ubuntu
+# Tested for Ubuntu
 Compiled and Tested on Ubuntu 14.04 LTS and Ubuntu 16.04. with QT Creator 5.4.1
 
-#Installation
+# Installation
 Download and Install latest C++ Qt Creator 5.4.1
 Add the Shobhika font to Ubuntu: https://github.com/Sandhi-IITBombay/Shobhika for Devanagari
 
 # How to run the code?
-Open Project with Qt Creator: Open File qpadfinal/qpadfinal.pro
+Download the source code. Open, Qt Creator and then Open the Project File FrameWorkCode/qpadfinal.pro
 Press "Ctrl+R" to run the code
 
 # Creating Databse for Framework:
