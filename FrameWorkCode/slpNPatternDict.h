@@ -14,6 +14,7 @@
 //#include <boost/archive/text_oarchive.hpp>
 //#include "toFromslp1.h"
 using namespace std;
+bool HinFlag , SanFlag;
 
 string ReplaceString(string subject, const string& search, const string& replace)
 {
@@ -48,7 +49,7 @@ string ReplaceStringRestricted(string subject, const string& search, const strin
     return subject;
 }
 
-bool HinFlag =0, SanFlag = 1;
+
 
 string toDev(string s)
 { //Hin:-

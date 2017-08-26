@@ -2059,15 +2059,16 @@ void MainWindow::on_actionEditDistRep_triggered()
         QFile sFile(file1);
         if(sFile.open(QFile::ReadOnly | QFile::Text)){
         string localFilenameN = file1.toUtf8().constData();
-        std::ifstream ip(localFilenameN);
+        std::ifstream ip1(localFilenameN); std::ifstream ip2(localFilenameN+"y");
         std::ofstream op(localFilenameN+"EditDisRep");
-        string line;
+        string word1,word2;
         int max = 0;
         op << "a = [";
-        while(getline(ip,line)) {
-            istringstream l(line);
-            string word1, word2;
-            l >> word1; l >> word2;
+        while(getline(ip1,word1)) {
+            //istringstream l(line);
+            //string word1, word2;
+            //l >> word1; l >> word2;
+            getline(ip2,word2);
             int ed = editDist(word1,word2);
             op << ed << " ";
             if (ed > max ) max = ed;
@@ -2412,4 +2413,19 @@ void MainWindow::on_actionErrorDetectionRepUniq_triggered()
     rep << "legend(\'IncorrectWords\',\'CorrectWords\', \'#TypingCorrections\', \'#CorrectSugg1\',\'#CorrectSugg2\',\'#CorrectSugg3\',\'#CorrectSugg4\',\'#CorrectSugg5\',\'#CorrectSugg6\',\'#CorrectSugg7\',\'#CorrectSugg8\',\'#CorrectSugg9\' )" << endl;
     rep <<"TotalSuggestions =" << "sum(y3+y4+y5+y6+y7+y8+y9+y10+y11)" << endl;
     rep <<"TotalSuggestionsWithLSTM =" << "sum(y3+y4+y5+y6+y7+y8+y9+y10+y11+y12)" << endl;
+}
+
+void MainWindow::on_actionSanskrit_triggered()
+{
+    HinFlag = 0 , SanFlag = 1;
+}
+
+void MainWindow::on_actionHindi_triggered()
+{
+    HinFlag = 1 , SanFlag = 0;
+}
+
+void MainWindow::on_actionEnglish_triggered()
+{
+    HinFlag = 0 , SanFlag = 0;
 }
