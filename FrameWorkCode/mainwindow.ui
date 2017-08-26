@@ -94,7 +94,7 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sanskrit 2003'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu';&quot;&gt;Please Select the Language from top left menu before loading any document.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="acceptRichText">
          <bool>true</bool>
@@ -201,6 +201,15 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="actionPrepareFeatures"/>
    </widget>
+   <widget class="QMenu" name="menuSelectLanguage">
+    <property name="title">
+     <string>SelectLanguage</string>
+    </property>
+    <addaction name="actionSanskrit"/>
+    <addaction name="actionHindi"/>
+    <addaction name="actionEnglish"/>
+   </widget>
+   <addaction name="menuSelectLanguage"/>
    <addaction name="menuOCR_Correction_Window"/>
    <addaction name="menuCreateReports"/>
    <addaction name="menuSaveVariables"/>
@@ -227,7 +236,12 @@ p, li { white-space: pre-wrap; }
    <addaction name="separator"/>
    <addaction name="actionLoadGDocPage"/>
    <addaction name="separator"/>
+   <addaction name="actionSanskrit"/>
+   <addaction name="actionEnglish"/>
+   <addaction name="actionHindi"/>
+   <addaction name="separator"/>
    <addaction name="actionToDevanagari"/>
+   <addaction name="separator"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpen">
@@ -310,7 +324,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionLoadGDocPage">
    <property name="text">
-    <string>Save and Load PWords(CntrlShftP)</string>
+    <string>Save&amp;LoadPWords(CntrlShftP)</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+P</string>
@@ -456,6 +470,24 @@ p, li { white-space: pre-wrap; }
   <action name="actionErrorDetectionRepUniq">
    <property name="text">
     <string>ErrorSuggRepUniq</string>
+   </property>
+  </action>
+  <action name="actionSanskrit">
+   <property name="text">
+    <string>Sanskrit</string>
+   </property>
+  </action>
+  <action name="actionHindi">
+   <property name="text">
+    <string>Hindi/Marathi</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="text">
+    <string>English</string>
+   </property>
+   <property name="toolTip">
+    <string>English</string>
    </property>
   </action>
  </widget>
