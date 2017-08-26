@@ -25,8 +25,8 @@
 #include <QLabel>
 #include <QMouseEvent>
 #include <QDebug>
-//#include <tesseract/baseapi.h>
-//#include <leptonica/allheaders.h>
+#include <tesseract/baseapi.h>
+#include <leptonica/allheaders.h>
 #include <QPlainTextEdit>
 //#include "toFromslp1.h"
 #include "zoom.h"
@@ -139,6 +139,12 @@ private slots:
     void on_actionPrepareFeatures_triggered();
 
     void on_actionErrorDetectionRepUniq_triggered();
+
+    void on_actionSanskrit_triggered();
+
+    void on_actionHindi_triggered();
+
+    void on_actionEnglish_triggered();
 
 private:
     Ui::MainWindow *ui;
