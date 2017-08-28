@@ -63,7 +63,7 @@ The folder “data/Book1Sanskrit” contains:-
 
 # How to use the Framework
 
-1) Click on the “Open” icon on top left, or press “Ctrl+O”
+1) Select the Language out of Sanskrit, Hindi/Marathi or English from top right. Click on the “Open” icon on top left, or press “Ctrl+O”.
 2) Open the file “data/Book1Sanskrit/Inds/page-1.txt”. This also link the files and folders in “Book1Sanskrit/”.
 3) Click on “Load Data” to load Dictionary, Confusions, Sandhi Rules, GEROCR , IEROCR. Common OCR words in GEROCR and IEROCR will be loaded in Domain Vocabulary. It will take few seconds.
 If you forget to “Load Data”, data will be loaded whenever you right click a word.
@@ -74,7 +74,7 @@ e.g. :-
 If there are any issues in the format, just right click on the word and select the correct suggestion. Leave the correct colored words as it is.
 6) Do not forget to use “Cntrl + S” to save the partially/fully corrected page to folder “Corrected”. Next time you come to the same page, the page will be uploaded from folder “Corrected” automatically.
 7) Very Important: Afther the whole page is corrected load the words in Domainvocabulary by clicking “Cntrl + Shift + P”.
-8) There is a timer on top left which gets updated on each right click or “Ctrl S”. It resets to 0 on loading the new page. Use “Ctrl R” to move to next page and “Ctrl L” to move to previous page.
+8) There is a timer on top left which gets updated on each right click or “Ctrl S”. It resets to 0 on loading the new page. Use “Ctrl+Shift+R” to move to next page and “Ctrl+Shift+L” to move to previous page.
 9) As you use “Cntrl + Shift + P” to load domain words, you will observe improvement in suggestions page by page.
 10) A useful tip: keep the GEROCR open in an editor as certain correct lines can be directly copied from it.
 
