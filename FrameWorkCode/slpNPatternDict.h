@@ -14,7 +14,7 @@
 //#include <boost/archive/text_oarchive.hpp>
 //#include "toFromslp1.h"
 using namespace std;
-bool HinFlag , SanFlag;
+bool HinFlag = 0, SanFlag = 1;
 
 string ReplaceString(string subject, const string& search, const string& replace)
 {
