@@ -1121,11 +1121,11 @@ for(map<string, int >::const_iterator it = ConfPmap.begin();
         {
         //std::cout << it->first << " " << it->second<< "\n";
     string rule = it->first; istringstream s(rule);string l,r; s>>l; s>>r;
-    if(TopSuggFreq[l] < it->second){
+    //if(TopSuggFreq[l] < it->second){
         TopSuggFreq[l] = it->second;
         TopConfusions[l] = r;
         TopConfusionsMask[l] ++;
-        }
+        //}
     l.clear(); r.clear();
     }
 }
@@ -1490,7 +1490,7 @@ if (SamasCheck(OCRNew, Dict)) return OCRNew;
 if (SandhiCheck(OCRNew, Dict,SRules)) return OCRNew;
 }
 }
-return "/";
+return "";
 }
 
 #endif // SLPNPATTERNDICT_H
