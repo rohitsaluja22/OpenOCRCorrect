@@ -78,6 +78,27 @@ If there are any issues in the format, just right click on the word and select t
 9) As you use “Cntrl + Shift + P” to load domain words, you will observe improvement in suggestions page by page.
 10) A useful tip: keep the GEROCR open in an editor as certain correct lines can be directly copied from it.
 
+# Citations
+
+You can read about our papers on: https://www.cse.iitb.ac.in/~rohitsaluja/publication.html
+If you use this framework or learn from our publications, please cite our papers:
+
+@article{RohitErrorDetectionNCorrection,
+    author="Rohit Saluja and Devaraj Adiga and Parag Chaudhuri and Ganesh Ramakrishnan and Mark Carman",
+    title="Error Detection and Corrections in {I}ndic {OCR} using {LSTM}s",
+    journal = "International Conference on Document Analysis and Recognition ({ICDAR})",
+    location="Kyoto, Japan",
+    year="2017"
+}
+
+@article{RohitOpenOCRCorrect,
+        author="Rohit Saluja and Devaraj Adiga and Parag Chaudhuri and Ganesh Ramakrishnan and Mark Carman",
+    title="A Framework for Document Specific Error Detection and Corrections in {I}ndic {OCR}",
+    journal="1st International Workshop on Open Services and Tools for Document Analysis (ICDAR- OST)",
+    location="Kyoto, Japan",
+    year="2017"
+}
+
 # References:
 1. We started the code (and used icons) from: https://www.youtube.com/watch?v=x858_WCtl_Y
 2. We further improved the application via ideas from "QPlainTextEdit With In Line Spell Check". Visit: https://john.nachtimwald.com/2009/08/22/qplaintextedit-with-in-line-spell-check/
