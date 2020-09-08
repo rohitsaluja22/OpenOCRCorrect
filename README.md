@@ -72,11 +72,12 @@ If you forget to “Load Data”, data will be loaded whenever you right click a
 e.g. :-
 प्रन्थाङ्कः -> graन्थाङ्कः -> (Cntrl D) -> ग्रन्थाङ्कः
 If there are any issues in the format, just right click on the word and select the correct suggestion. Leave the correct colored words as it is.
-6) Do not forget to use “Cntrl + S” to save the partially/fully corrected page to folder “Corrected”. Next time you come to the same page, the page will be uploaded from folder “Corrected” automatically.
-7) Very Important: Afther the whole page is corrected load the words in Domainvocabulary by clicking “Cntrl + Shift + P”.
-8) There is a timer on top left which gets updated on each right click or “Ctrl S”. It resets to 0 on loading the new page. Use “Ctrl+Shift+R” to move to next page and “Ctrl+Shift+L” to move to previous page.
-9) As you use “Cntrl + Shift + P” to load domain words, you will observe improvement in suggestions page by page.
-10) A useful tip: keep the GEROCR open in an editor as certain correct lines can be directly copied from it.
+6) Press "Cntrl+B" / "Bold" icon after selecting a text to make the font bold.
+7) Do not forget to use “Cntrl + S” to save the partially/fully corrected page to folder “Corrected”. Next time you come to the same page, the page will be uploaded from folder “Corrected” automatically.
+8) Very Important: Afther the whole page is corrected load the words in Domainvocabulary by clicking “Cntrl + Shift + P”.
+9) There is a timer on top left which gets updated on each right click or “Ctrl S”. It resets to 0 on loading the new page. Use “Ctrl+Shift+R” to move to next page and “Ctrl+Shift+L” to move to previous page.
+10) As you use “Cntrl + Shift + P” to load domain words, you will observe improvement in suggestions page by page.
+11) A useful tip: keep the GEROCR open in an editor as certain correct lines can be directly copied from it.
 
 # Citations
 
