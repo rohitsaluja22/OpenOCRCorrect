@@ -35,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->textBrowser->installEventFilter(this);
     ui->textBrowser->setLineWrapColumnOrWidth(QTextEdit::NoWrap);
     //QObject::connect(ui->textBrowser,SIGNAL(textChanged()),this,SLOT(textChangedSlot()));
+    // connect(ui->actionBold, &QAction::triggered, this, &MainWindow::on_actionBold_triggered);
     QString str = "SLP1 Guide:";
     str += "\n";
     str += "डॉ,, ड़,, ढ़,, अ   - a,, आ/ ा   - A,, इ/ ि   - i,, ई/ ी   - I,, उ/ ु   - u,, ऊ/ ू   - U,, ऋ/ ृ   - f,, ॠ/ ॄ   - F,, ऌ/ ॢ   - x,, ॡ/ \"ॣ\”   - X,, ए/ े   - e,, ऐ/ ै   - E,, ओ/ ो   - o,, औ/ ौ   - O,, ं   - M,, ः   - H,, ँ    - ~,, ऽ   - $,, ॐ   - %,, ज्ञ   - jYa ,, ळ ,, त्र   - tra,, श्र   - Sra,, क्ष्/क्ष   - kz/kza,, द्य्/द्य   - dy/dya,, क्/क   - k/ka,, ख्/ख   - K/Ka,, ग्/ग   - g/ga,, घ्/घ   - G/Ga,, ङ्/ङ   - N/Na,, च्/च   - c/ca,, छ्/छ   - C/Ca,, ज्/ज   - j/ja,, झ्/झ   - J/Ja,, ञ्/ञ   - Y/Ya,, ट्/ट   - w/wa,, ठ्/ठ   - W/Wa,, ड्/ड   - q/qa,, ढ्/ढ   - Q/Qa,, ण्/ण   - R/Ra,, त्/त   - t/ta,, थ्/थ   - T/Ta,, द्/द   - d/da,, ध्/ध   - D/Da,, न्/न   - n/na,, प्/प   - p/pa,, फ्/फ   - P/Pa,, ब्/ब   - b/ba,, भ्/भ   - B/Ba,, म्/म   - m/ma,, य्/य   - y/ya,, र्/र   - r/ra,, ल्/ल   - l/la,, व्/व   - v/va,, श्/श   - S/Sa,, ष्/ष   - z/za,, स्/स   - s/sa,, ह्/ह   - h/ha,, ळ्/ळ   - &/&a,, ऩ्  -%,, फ़्  - ^,, य़्  - L,, ऱ्  - V,,१   - 1,, २   - 2,, ३   - 3,, ४   - 4,, ५   - 5,, ६   - 6,, ७   - 7,, ८   - 8,, ९   - 9,, ०   - 0,, ।   - |,, ॥   - ||";
@@ -2428,4 +2429,9 @@ void MainWindow::on_actionHindi_triggered()
 void MainWindow::on_actionEnglish_triggered()
 {
     HinFlag = 0 , SanFlag = 0;
+}
+
+void MainWindow::on_actionBold_triggered(bool checked)
+{
+    checked ? ui->textBrowser->setFontWeight(QFont::Bold) : ui->textBrowser->setFontWeight(QFont::Normal);
 }
