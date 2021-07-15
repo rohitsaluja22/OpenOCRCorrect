@@ -14,7 +14,7 @@ Following information is updated on the fly, after correction of each page:-
 
 # Video demo
 
-https://tinyurl.com/y7wbpo6m 
+https://www.youtube.com/watch?v=iYagbg-yKsc 
 1. After laoding the OCR page, as user clicks on Spell Check, the correct words remain black.
 2. The purple words are the auto corrections.
 3. The incorrect words are colored with blue, green and red strings from Dictionary. This improves readability.
@@ -82,23 +82,35 @@ If there are any issues in the format, just right click on the word and select t
 
 You can read about our papers on: https://www.cse.iitb.ac.in/~rohitsaluja/publication.html
 If you use this framework or learn from our publications, please cite our papers:
-
-@article{RohitErrorDetectionNCorrection,
-    author="Rohit Saluja and Devaraj Adiga and Parag Chaudhuri and Ganesh Ramakrishnan and Mark Carman",
-    title="Error Detection and Corrections in {I}ndic {OCR} using {LSTM}s",
-    journal = "International Conference on Document Analysis and Recognition ({ICDAR})",
-    location="Kyoto, Japan",
-    year="2017"
+```
+@inproceedings{rohit2017,
+  title={Error {D}etection and {C}orrections in {I}ndic {OCR} using {LSTM}s},
+  author={Saluja, Rohit and Adiga, Devaraj and Chaudhuri, Parag and Ramakrishnan, Ganesh and Carman, Mark},
+  booktitle={2017 14th IAPR International Conference on Document Analysis and Recognition (ICDAR)},
+  volume={1},
+  pages={17--22},
+  year={2017},
+  organization={IEEE},
 }
 
-@article{RohitOpenOCRCorrect,
-        author="Rohit Saluja and Devaraj Adiga and Parag Chaudhuri and Ganesh Ramakrishnan and Mark Carman",
-    title="A Framework for Document Specific Error Detection and Corrections in {I}ndic {OCR}",
-    journal="1st International Workshop on Open Services and Tools for Document Analysis (ICDAR- OST)",
-    location="Kyoto, Japan",
-    year="2017"
+@inproceedings{saluja2017framework,
+  title={A {F}ramework for {D}ocument {S}pecific {E}rror {D}etection and {C}orrections in {I}ndic {OCR}},
+  author={Saluja, Rohit and Adiga, Devaraj and Ramakrishnan, Ganesh and Chaudhuri, Parag and Carman, Mark},
+  booktitle={2017 14th IAPR International Conference on Document Analysis and Recognition (ICDAR)},
+  volume={4},
+  pages={25--30},
+  year={2017},
+  organization={IEEE}
 }
 
+@inproceedings{adiga2018improving,
+  title={Improving the learnability of classifiers for {S}anskrit {OCR} corrections},
+  author={Adiga, Devaraja and Saluja, Rohit and Agrawal, Vaibhav and Ramakrishnan, Ganesh and Chaudhuri, Parag and Ramasubramanian, K and Kulkarni, Malhar},
+  booktitle={The 17th World Sanskrit Conference, Vancouver, Canada. IASS},
+  year={2018},
+  pages={143--161}
+}
+```
 # References:
 1. We started the code (and used icons) from: https://www.youtube.com/watch?v=x858_WCtl_Y
 2. We further improved the application via ideas from "QPlainTextEdit With In Line Spell Check". Visit: https://john.nachtimwald.com/2009/08/22/qplaintextedit-with-in-line-spell-check/
