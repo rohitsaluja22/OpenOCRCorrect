@@ -12,6 +12,10 @@ Following information is updated on the fly, after correction of each page:-
 2. The domain specific dictionary is also uploaded with OCR words with high confidence as the user starts working on the document.
 3. OCR confusions specific to the documents which are uploaded on the fly.
 
+# Updated versions
+
+https://www.cse.iitb.ac.in/~ocr/
+
 # Video demo
 
 https://www.youtube.com/watch?v=iYagbg-yKsc 
