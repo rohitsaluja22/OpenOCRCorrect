@@ -209,8 +209,15 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionHindi"/>
     <addaction name="actionEnglish"/>
    </widget>
+   <widget class="QMenu" name="menuText">
+    <property name="title">
+     <string>Text</string>
+    </property>
+    <addaction name="actionBold"/>
+   </widget>
    <addaction name="menuSelectLanguage"/>
    <addaction name="menuOCR_Correction_Window"/>
+   <addaction name="menuText"/>
    <addaction name="menuCreateReports"/>
    <addaction name="menuSaveVariables"/>
    <addaction name="menuConvertFiles"/>
@@ -227,6 +234,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="actionOpen"/>
    <addaction name="actionSave"/>
    <addaction name="actionSave_As"/>
+   <addaction name="actionBold"/>
    <addaction name="actionLoadData"/>
    <addaction name="separator"/>
    <addaction name="actionSpell_Check"/>
@@ -488,6 +496,21 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="toolTip">
     <string>English</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="AppResources.qrc">
+     <normaloff>:/Images/bold.png</normaloff>:/Images/bold.png</iconset>
+   </property>
+   <property name="text">
+    <string>Bold</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
    </property>
   </action>
  </widget>

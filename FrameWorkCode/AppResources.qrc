@@ -9,5 +9,6 @@
         <file>New.png</file>
         <file>cut.png</file>
         <file>copy.png</file>
+        <file>bold.png</file>
     </qresource>
 </RCC>
