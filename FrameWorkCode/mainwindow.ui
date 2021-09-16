@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1369</width>
+    <width>1812</width>
     <height>736</height>
    </rect>
   </property>
@@ -137,7 +137,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1369</width>
+     <width>1812</width>
      <height>22</height>
     </rect>
    </property>
@@ -242,6 +242,9 @@ p, li { white-space: pre-wrap; }
    <addaction name="separator"/>
    <addaction name="actionToDevanagari"/>
    <addaction name="separator"/>
+   <addaction name="actionBold"/>
+   <addaction name="actionSuperScript"/>
+   <addaction name="actionSubscript"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpen">
@@ -488,6 +491,21 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="toolTip">
     <string>English</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="text">
+    <string>Bold</string>
+   </property>
+  </action>
+  <action name="actionSuperScript">
+   <property name="text">
+    <string>SuperScript</string>
+   </property>
+  </action>
+  <action name="actionSubscript">
+   <property name="text">
+    <string>Subscript</string>
    </property>
   </action>
  </widget>

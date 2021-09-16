@@ -2430,45 +2430,40 @@ void MainWindow::on_actionEnglish_triggered()
     HinFlag = 0 , SanFlag = 0;
 }
 
-
 void MainWindow::on_actionBold_triggered(bool checked)
 {
     checked ? ui->textEdit->setFontWeight(QFont::Bold) :
-              ui->textEdit->setFontWeight(QFont::Normal);
+                  ui->textEdit->setFontWeight(QFont::Normal);
 }
 
-
-void MainWindow::on_actionsuperscript_triggered(bool checked)
+void MainWindow::on_actionSuperScript_toggled(bool checked)
 {
     if(checked){
-        QTextCharFormat format;
-        format.setVerticalAlignment(QTextCharFormat::AlignSuperScript);
-         if(ui->textEdit->hasFocus())
-            ui->textEdit->mergeCurrentCharFormat(format);
-    }
-    else{
-        QTextCharFormat format;
-        format.setVerticalAlignment(QTextCharFormat::AlignNormal);
-         if(ui->textEdit->hasFocus())
-            ui->textEdit->mergeCurrentCharFormat(format);
-    }
-
+            QTextCharFormat format;
+            format.setVerticalAlignment(QTextCharFormat::AlignSuperScript);
+             if(ui->textEdit->hasFocus())
+                ui->textEdit->mergeCurrentCharFormat(format);
+        }
+        else{
+            QTextCharFormat format;
+            format.setVerticalAlignment(QTextCharFormat::AlignNormal);
+             if(ui->textEdit->hasFocus())
+                ui->textEdit->mergeCurrentCharFormat(format);
+        }
 }
 
-
-void MainWindow::on_actionsubscript_triggered(bool checked)
+void MainWindow::on_actionSubscript_toggled(bool checked)
 {
     if(checked){
-        QTextCharFormat format;
-        format.setVerticalAlignment(QTextCharFormat::AlignSubScript);
-         if(ui->textEdit->hasFocus())
-            ui->textEdit->mergeCurrentCharFormat(format);
-    }
-    else{
-        QTextCharFormat format;
-        format.setVerticalAlignment(QTextCharFormat::AlignNormal);
-         if(ui->textEdit->hasFocus())
-            ui->textEdit->mergeCurrentCharFormat(format);
-    }
-
+            QTextCharFormat format;
+            format.setVerticalAlignment(QTextCharFormat::AlignSubScript);
+             if(ui->textEdit->hasFocus())
+                ui->textEdit->mergeCurrentCharFormat(format);
+        }
+        else{
+            QTextCharFormat format;
+            format.setVerticalAlignment(QTextCharFormat::AlignNormal);
+             if(ui->textEdit->hasFocus())
+                ui->textEdit->mergeCurrentCharFormat(format);
+        }
 }
