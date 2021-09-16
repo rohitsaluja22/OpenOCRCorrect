@@ -146,6 +146,12 @@ private slots:
 
     void on_actionEnglish_triggered();
 
+    void on_actionBold_triggered(bool checked);
+
+    void on_actionsuperscript_triggered(bool checked);
+
+    void on_actionsubscript_triggered(bool checked);
+
 private:
     Ui::MainWindow *ui;
 
