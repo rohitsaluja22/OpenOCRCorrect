@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1812</width>
-    <height>736</height>
+    <width>1714</width>
+    <height>516</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -137,7 +137,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1812</width>
+     <width>1714</width>
      <height>22</height>
     </rect>
    </property>
@@ -209,12 +209,21 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionHindi"/>
     <addaction name="actionEnglish"/>
    </widget>
+   <widget class="QMenu" name="menuFormatting">
+    <property name="title">
+     <string>Text Formatting</string>
+    </property>
+    <addaction name="actionBold"/>
+    <addaction name="actionSuperscript"/>
+    <addaction name="actionSubscript"/>
+   </widget>
    <addaction name="menuSelectLanguage"/>
    <addaction name="menuOCR_Correction_Window"/>
    <addaction name="menuCreateReports"/>
    <addaction name="menuSaveVariables"/>
    <addaction name="menuConvertFiles"/>
    <addaction name="menuFeatureExtraction"/>
+   <addaction name="menuFormatting"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -243,7 +252,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="actionToDevanagari"/>
    <addaction name="separator"/>
    <addaction name="actionBold"/>
-   <addaction name="actionSuperScript"/>
+   <addaction name="actionSuperscript"/>
    <addaction name="actionSubscript"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -494,16 +503,25 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionBold">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Bold</string>
    </property>
   </action>
-  <action name="actionSuperScript">
+  <action name="actionSuperscript">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
-    <string>SuperScript</string>
+    <string>Superscript</string>
    </property>
   </action>
   <action name="actionSubscript">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="text">
     <string>Subscript</string>
    </property>

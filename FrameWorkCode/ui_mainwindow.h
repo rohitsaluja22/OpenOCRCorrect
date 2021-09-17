@@ -70,6 +70,9 @@ public:
     QAction *actionSanskrit;
     QAction *actionHindi;
     QAction *actionEnglish;
+    QAction *actionBold;
+    QAction *actionSuperscript;
+    QAction *actionSubscript;
     QWidget *centralWidget;
     QVBoxLayout *verticalLayout;
     QProgressBar *progressBar;
@@ -85,6 +88,7 @@ public:
     QMenu *menuConvertFiles;
     QMenu *menuFeatureExtraction;
     QMenu *menuSelectLanguage;
+    QMenu *menuFormatting;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -92,7 +96,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1369, 736);
+        MainWindow->resize(1714, 516);
         MainWindow->setMouseTracking(true);
         actionOpen = new QAction(MainWindow);
         actionOpen->setObjectName(QStringLiteral("actionOpen"));
@@ -180,6 +184,15 @@ public:
         actionHindi->setObjectName(QStringLiteral("actionHindi"));
         actionEnglish = new QAction(MainWindow);
         actionEnglish->setObjectName(QStringLiteral("actionEnglish"));
+        actionBold = new QAction(MainWindow);
+        actionBold->setObjectName(QStringLiteral("actionBold"));
+        actionBold->setCheckable(true);
+        actionSuperscript = new QAction(MainWindow);
+        actionSuperscript->setObjectName(QStringLiteral("actionSuperscript"));
+        actionSuperscript->setCheckable(true);
+        actionSubscript = new QAction(MainWindow);
+        actionSubscript->setObjectName(QStringLiteral("actionSubscript"));
+        actionSubscript->setCheckable(true);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayout = new QVBoxLayout(centralWidget);
@@ -219,7 +232,7 @@ public:
         textBrowser->setObjectName(QStringLiteral("textBrowser"));
         QFont font1;
         font1.setFamily(QStringLiteral("Shobhika"));
-        font1.setPointSize(24);
+        font1.setPointSize(16);
         font1.setItalic(false);
         textBrowser->setFont(font1);
         textBrowser->setMouseTracking(true);
@@ -250,7 +263,7 @@ public:
         progressBar->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1369, 22));
+        menuBar->setGeometry(QRect(0, 0, 1714, 22));
         menuOCR_Correction_Window = new QMenu(menuBar);
         menuOCR_Correction_Window->setObjectName(QStringLiteral("menuOCR_Correction_Window"));
         menuCreateReports = new QMenu(menuBar);
@@ -263,6 +276,8 @@ public:
         menuFeatureExtraction->setObjectName(QStringLiteral("menuFeatureExtraction"));
         menuSelectLanguage = new QMenu(menuBar);
         menuSelectLanguage->setObjectName(QStringLiteral("menuSelectLanguage"));
+        menuFormatting = new QMenu(menuBar);
+        menuFormatting->setObjectName(QStringLiteral("menuFormatting"));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -278,6 +293,7 @@ public:
         menuBar->addAction(menuSaveVariables->menuAction());
         menuBar->addAction(menuConvertFiles->menuAction());
         menuBar->addAction(menuFeatureExtraction->menuAction());
+        menuBar->addAction(menuFormatting->menuAction());
         menuOCR_Correction_Window->addAction(actionNew);
         menuOCR_Correction_Window->addAction(actionOpen);
         menuOCR_Correction_Window->addAction(actionSave);
@@ -316,6 +332,9 @@ public:
         menuSelectLanguage->addAction(actionSanskrit);
         menuSelectLanguage->addAction(actionHindi);
         menuSelectLanguage->addAction(actionEnglish);
+        menuFormatting->addAction(actionBold);
+        menuFormatting->addAction(actionSuperscript);
+        menuFormatting->addAction(actionSubscript);
         mainToolBar->addAction(actionNew);
         mainToolBar->addAction(actionOpen);
         mainToolBar->addAction(actionSave);
@@ -335,6 +354,9 @@ public:
         mainToolBar->addSeparator();
         mainToolBar->addAction(actionToDevanagari);
         mainToolBar->addSeparator();
+        mainToolBar->addAction(actionBold);
+        mainToolBar->addAction(actionSuperscript);
+        mainToolBar->addAction(actionSubscript);
 
         retranslateUi(MainWindow);
 
@@ -404,10 +426,13 @@ public:
 #ifndef QT_NO_TOOLTIP
         actionEnglish->setToolTip(QApplication::translate("MainWindow", "English", 0));
 #endif // QT_NO_TOOLTIP
+        actionBold->setText(QApplication::translate("MainWindow", "Bold", 0));
+        actionSuperscript->setText(QApplication::translate("MainWindow", "Superscript", 0));
+        actionSubscript->setText(QApplication::translate("MainWindow", "Subscript", 0));
         textBrowser->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Shobhika'; font-size:24pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Shobhika'; font-size:16pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Ubuntu'; font-size:11pt;\">Please Select the Language from top left menu before loading any document.</span></p></body></html>", 0));
         menuOCR_Correction_Window->setTitle(QApplication::translate("MainWindow", "File", 0));
         menuCreateReports->setTitle(QApplication::translate("MainWindow", "CreateReports", 0));
@@ -415,6 +440,7 @@ public:
         menuConvertFiles->setTitle(QApplication::translate("MainWindow", "ConvertFiles", 0));
         menuFeatureExtraction->setTitle(QApplication::translate("MainWindow", "FeatureExtraction", 0));
         menuSelectLanguage->setTitle(QApplication::translate("MainWindow", "SelectLanguage", 0));
+        menuFormatting->setTitle(QApplication::translate("MainWindow", "Text Formatting", 0));
     } // retranslateUi
 
 };

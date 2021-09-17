@@ -2436,7 +2436,9 @@ void MainWindow::on_actionBold_triggered(bool checked)
                   ui->textEdit->setFontWeight(QFont::Normal);
 }
 
-void MainWindow::on_actionSuperScript_toggled(bool checked)
+
+
+void MainWindow::on_actionSuperscript_triggered(bool checked)
 {
     if(checked){
             QTextCharFormat format;
@@ -2452,7 +2454,7 @@ void MainWindow::on_actionSuperScript_toggled(bool checked)
         }
 }
 
-void MainWindow::on_actionSubscript_toggled(bool checked)
+void MainWindow::on_actionSubscript_triggered(bool checked)
 {
     if(checked){
             QTextCharFormat format;
