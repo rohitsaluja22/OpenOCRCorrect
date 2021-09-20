@@ -2429,3 +2429,43 @@ void MainWindow::on_actionEnglish_triggered()
 {
     HinFlag = 0 , SanFlag = 0;
 }
+
+void MainWindow::on_actionBold_triggered(bool checked)
+{
+    checked ? ui->textBrowser->setFontWeight(QFont::Bold) :
+                  ui->textBrowser->setFontWeight(QFont::Normal);
+}
+
+
+
+void MainWindow::on_actionSuperscript_triggered(bool checked)
+{
+    if(checked){
+            QTextCharFormat format;
+            format.setVerticalAlignment(QTextCharFormat::AlignSuperScript);
+             if(ui->textBrowser->hasFocus())
+                ui->textBrowser->mergeCurrentCharFormat(format);
+        }
+        else{
+            QTextCharFormat format;
+            format.setVerticalAlignment(QTextCharFormat::AlignNormal);
+             if(ui->textBrowser->hasFocus())
+                ui->textBrowser->mergeCurrentCharFormat(format);
+        }
+}
+
+void MainWindow::on_actionSubscript_triggered(bool checked)
+{
+    if(checked){
+            QTextCharFormat format;
+            format.setVerticalAlignment(QTextCharFormat::AlignSubScript);
+             if(ui->textBrowser->hasFocus())
+                ui->textBrowser->mergeCurrentCharFormat(format);
+        }
+        else{
+            QTextCharFormat format;
+            format.setVerticalAlignment(QTextCharFormat::AlignNormal);
+             if(ui->textBrowser->hasFocus())
+                ui->textBrowser->mergeCurrentCharFormat(format);
+        }
+}
