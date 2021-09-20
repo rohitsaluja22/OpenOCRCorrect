@@ -2432,8 +2432,8 @@ void MainWindow::on_actionEnglish_triggered()
 
 void MainWindow::on_actionBold_triggered(bool checked)
 {
-    checked ? ui->textEdit->setFontWeight(QFont::Bold) :
-                  ui->textEdit->setFontWeight(QFont::Normal);
+    checked ? ui->textBrowser->setFontWeight(QFont::Bold) :
+                  ui->textBrowser->setFontWeight(QFont::Normal);
 }
 
 
@@ -2443,14 +2443,14 @@ void MainWindow::on_actionSuperscript_triggered(bool checked)
     if(checked){
             QTextCharFormat format;
             format.setVerticalAlignment(QTextCharFormat::AlignSuperScript);
-             if(ui->textEdit->hasFocus())
-                ui->textEdit->mergeCurrentCharFormat(format);
+             if(ui->textBrowser->hasFocus())
+                ui->textBrowser->mergeCurrentCharFormat(format);
         }
         else{
             QTextCharFormat format;
             format.setVerticalAlignment(QTextCharFormat::AlignNormal);
-             if(ui->textEdit->hasFocus())
-                ui->textEdit->mergeCurrentCharFormat(format);
+             if(ui->textBrowser->hasFocus())
+                ui->textBrowser->mergeCurrentCharFormat(format);
         }
 }
 
@@ -2459,13 +2459,13 @@ void MainWindow::on_actionSubscript_triggered(bool checked)
     if(checked){
             QTextCharFormat format;
             format.setVerticalAlignment(QTextCharFormat::AlignSubScript);
-             if(ui->textEdit->hasFocus())
-                ui->textEdit->mergeCurrentCharFormat(format);
+             if(ui->textBrowser->hasFocus())
+                ui->textBrowser->mergeCurrentCharFormat(format);
         }
         else{
             QTextCharFormat format;
             format.setVerticalAlignment(QTextCharFormat::AlignNormal);
-             if(ui->textEdit->hasFocus())
-                ui->textEdit->mergeCurrentCharFormat(format);
+             if(ui->textBrowser->hasFocus())
+                ui->textBrowser->mergeCurrentCharFormat(format);
         }
 }
