@@ -33,6 +33,31 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+
+    QAction *actionBold;
+    QAction *actionUnbold;
+    QAction *actionSubscript;
+    QAction *actionSuperscript;
+
+    void setupUi(QMainWindow *MainWindow)
+    {
+        actionBold = new QAction(MainWindow);
+        actionBold->setObjectName(QString::fromUtf8("actionBold"));
+        actionBold->setText(QCoreApplication::translate("MainWindow", "Bold", nullptr));
+
+        actionUnbold = new QAction(MainWindow);
+        actionUnbold->setObjectName(QString::fromUtf8("actionUnbold"));
+        actionUnbold->setText(QCoreApplication::translate("MainWindow", "Unbold", nullptr));
+
+        actionSubscript = new QAction(MainWindow);
+        actionSubscript->setObjectName(QString::fromUtf8("actionSubscript"));
+        actionSubscript->setText(QCoreApplication::translate("MainWindow", "Subscript", nullptr));
+
+        actionSuperscript = new QAction(MainWindow);
+        actionSuperscript->setObjectName(QString::fromUtf8("actionSuperscript"));
+        actionSuperscript->setText(QCoreApplication::translate("MainWindow", "Superscript", nullptr));
+
+    }
     QAction *actionOpen;
     QAction *actionSave;
     QAction *actionSave_As;

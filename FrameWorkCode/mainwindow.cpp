@@ -42,6 +42,17 @@ MainWindow::MainWindow(QWidget *parent) :
     str.replace(",, ", "\n");
    // str.replace(", ","\t");
     ui->textEdit->setText(str);
+
+    //Changes by Kaushal-04
+    // Assuming textEdit is a central widget
+    textEdit = new QTextEdit(this);
+    setCentralWidget(textEdit);
+
+    connect(ui->actionBold, &QAction::triggered, this, &MainWindow::on_actionBold_triggered);
+    connect(ui->actionUnbold, &QAction::triggered, this, &MainWindow::on_actionUnbold_triggered);
+    connect(ui->actionSubscript, &QAction::triggered, this, &MainWindow::on_actionSubscript_triggered);
+    connect(ui->actionSuperscript, &QAction::triggered, this, &MainWindow::on_actionSuperscript_triggered);
+
 }
 
 MainWindow::~MainWindow()
